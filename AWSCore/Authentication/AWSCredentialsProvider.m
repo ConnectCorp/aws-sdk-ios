@@ -132,7 +132,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
                   webIdentityToken:(NSString *)webIdentityToken {
     if (self = [super init]) {
         _keychain = [AWSUICKeyChainStore keyChainStoreWithService:[NSString stringWithFormat:@"%@.%@.%@", providerId, webIdentityToken, roleArn]];
-        _providerId = providerId;
+        _providerId = nil;
         _roleArn = roleArn;
         _roleSessionName = roleSessionName;
         _webIdentityToken = webIdentityToken;
